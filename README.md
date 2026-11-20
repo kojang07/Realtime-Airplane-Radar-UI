@@ -42,3 +42,5 @@ CrowPanel 7.0" (ESP32-S3, 800×480 RGB) 디스플레이 기반의 **실시간 �
 1. **저장소 클론 및 스케치 열기**
    ```bash
    git clone [https://github.com/](https://github.com/)<your-username>/<your-repo-name>.git
+
+![실행 화면](./images/실행화면.png)
