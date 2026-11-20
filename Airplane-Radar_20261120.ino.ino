@@ -17,8 +17,8 @@
 // ==========================================
 // 1. 사용자 설정 (Wi-Fi 및 기준 위치)
 // ==========================================
-const char* ssid     = "bj_home";
-const char* password = "";
+const char* ssid     = "YOUR_WIFI_SSID";
+const char* password = "YOUR_WIFI_PASSWORD";
 
 // 기준 좌표: 김해국제공항 (RKPK)
 const double HOME_LAT = 35.1795;
