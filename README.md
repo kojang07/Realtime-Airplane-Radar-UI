@@ -38,9 +38,28 @@ CrowPanel 7.0" (ESP32-S3, 800×480 RGB) 디스플레이 기반의 **실시간 �
 ---
 
 ## ⚙️ 설치 및 설정 방법
+* Arduino IDE 보드 설정 (CrowPanel 7.0" ESP32-S3 기준)
 
-1. **저장소 클론 및 스케치 열기**
-   ```bash
-   git clone [https://github.com/](https://github.com/)<your-username>/<your-repo-name>.git
+  * Board: ESP32S3 Dev Module
+
+  * PSRAM: OPI PSRAM (⚠️ 480×480 16-bit 스프라이트 2개를 사용하므로 반드시 활성화해야 합니다)
+
+  * Partition Scheme: Huge APP (3MB No OTA/1MB SPIFFS)
+
+
+* 컴파일 및 업로드
+
+🎨 색상 및 레이더 파라미터 커스터마이징
+  * 탐지 반경 변경: RADAR_RANGE_KM 및 API_RADIUS_NM 값을 수정하여 탐지 거리를 조정할 수 있습니다. (1 NM ≈ 1.852 km)
+
+  * 스윕 속도 및 잔광 길이: SWEEP_SPEED(ms 단위 갱신 주기)와 TRAIL_WIDTH(잔광 각도)로 레이더 회전감을 조절합니다.
+
+  * 컬러 지도 팔레트: setup() 내의 colSea, colLand, colCoast, colRiver, colAirway RGB565 값을 수정하여 원하는 야간/주간 관제 테마로 변경할 수 있습니다.
+
+📡 데이터 출처 (Data Source)
+  * 실시간 항공기 ADS-B 데이터는 adsb.lol Public API (/v2/point/{lat}/{lon}/{radius})를 통해 조회합니다.
+
+  * 본 프로젝트는 교육 및 취미·관측 목적으로 제작되었으며, 실제 항공 항법이나 관제 용도로 사용할 수 없습니다.
+
 
 ![실행 화면](./images/실행화면.png)
